@@ -1,0 +1,547 @@
+/* --------------fonts----------------*/
+@font-face {
+    font-family: 'Wakanda Forever';
+    src: url(../police/Wakanda-forever/WakandaForever-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Panthera';
+    src: url(../police/panthera/panthera.otf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Beyno';
+    src: url(../police/beyno/BEYNO.otf),
+        url(../police/beyno/BEYNO.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Cantarell';
+    src: url(../police/cantarell/Cantarell-Regular.ttf);
+    font-weight: normal;
+}
+
+nav li{
+    list-style-type: none;
+}
+
+/*--------------Variable de couleur-----------*/
+:root{
+    --white-color:#FFFFFF;
+    --purple-one:#F2CEF2;
+    --purple-two:#9E91B7;
+    --purple-three:#DF99F2;
+    --blue-one:#3D2DA6;
+    --blue-two:#07338C;
+    --blue-three:#021740;
+    }
+
+/* --------------le site------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    background: url(../Illustrations+Logo/All_pages/arrière_plan.png);
+    color: white;
+}
+.container {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+}
+h1 {
+    font-family: 'Beyno';
+    font-size: 50px;/* je n'ai pas fait à 68px comme dans l'énoncé parceque vous avez dit sur le canal"help qu'il faut suivre la forme de la maquette*/
+    font-weight: normal;
+    color: var(--purple-two);
+}
+
+p{
+    font-family: 'Cantarell';
+    font-size: 10px;/* je n'ai pas fait à 16px comme dans l'énoncé parceque vous avez dit sur le canal"help qu'il faut suivre la forme de la maquette*/
+}
+.plus {
+    font-family: 'Cantarell';
+    font-size: 10px;
+    color:var(--white-color);
+    font-weight: normal;
+    /*line-height: 1.5;*/
+}
+
+ /*apparition avec un mouvement slide*/
+ .fade-in {
+    opacity: 0;
+    transform: translateX(-50px); /* Décalage initial de -50px vers la gauche */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition pour l'animation */
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateX(0); /* Décalage final de 0px (pas de décalage) */
+  }
+
+    /* partie header */
+    /*des barres horizontaux*/
+    header{
+        padding-top: 20px;
+    }
+    /*logo en blanc*/
+    .blanc:hover{
+        filter: brightness(200%);
+    }
+    /*logo réseaux sociaux*/
+    .left-bar{
+        border: 1px solid var(--purple-two);
+        height: 457px;
+        width: 2px;
+        position: fixed;
+        left: 40px;
+    }
+    .rigth-bar{
+        border: 1px solid var(--purple-two);
+        height: 340px;
+        width: 2px;
+        position: fixed;
+        left: 55px;
+    }
+    .reso-socio{
+        width: 2px;
+        height: 2px;
+        position: fixed;
+        left: 50px;
+        top:347px;
+        display: inherit;
+    }
+    .reso-socio img{
+        width: 15px;
+        margin-top: 10px;
+        height: 15px;
+    }
+    /*couleur violet du logo*/
+    .logo-entete:hover{
+        cursor: pointer;
+        filter: invert(66%) sepia(88%) saturate(1004%) hue-rotate(265deg) brightness(106%) contrast(87%);
+    }
+.entete {
+    display: flex;
+    justify-content: space-between;
+}
+.nav-menu {
+    width: 30%;
+}
+.entete .nav-menu ul {
+    display: flex;
+    justify-content: space-between;
+}
+header li a{
+    text-decoration: none;
+    color: var(--white-color);
+}
+header li a:hover{
+    text-decoration: underline;
+    text-decoration-color: var(--white-color);
+}
+ul a.active{
+    color:var(--purple-two);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/*zoomer des photos dans la page*/
+.zoomable {
+    transition: transform 0.3s ease-in-out;
+}
+.zoomed {
+    transform: scale(1.2);
+}
+
+/*section accueil*/
+.sec1-wakanda{
+    background-image: url('../Illustrations+Logo/Wakanda/Pantherwakanda1.png');
+    background-size: cover;
+    height: 800px;
+    margin-left: -75px;
+}
+.sec1-wakanda h2 {
+    font-family: 'Wakanda forever';
+    font-size: 25px;/* je n'ai pas fait à 32px comme dans l'énoncé parceque vous avez dit sur le canal"help qu'il faut suivre la forme de la maquette*/
+    font-weight: normal;
+    color: var(--purple-two)
+}
+.wakanda-left{
+    width: 38%;
+    position: relative;
+    top: 35%;
+    left: 15%;
+}
+.sec1-wakanda h1{
+     margin-bottom: 15px;
+}
+.sec1-wakanda h2{
+    margin-bottom: 35px;
+    letter-spacing: 0.28em;
+}
+.sec1-wakanda p{
+     width: 70%;
+    text-align: justify;
+}
+
+/* -------------Section wakanda texte-----------  */
+.sec2-wakanda{
+    background-image: url('../Illustrations+Logo/Wakanda/Pantherwakanda2.png' );
+    background-size: cover;
+    position: relative;
+    margin-top: -54px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.sec2-wakanda::before{
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2, 23, 64, 0.5 );
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9 ), transparent);
+}
+.colonne{
+    position: relative; /* Assurez-vous que le texte est positionné */
+  z-index: 1;
+}
+.sec2-wakanda h2 {
+    font-family: 'BEYNO';
+    font-size: 20px;/* je n'ai pas fait à 32px comme dans l'énoncé parceque vous avez dit sur le canal"help qu'il faut suivre la forme de la maquette*/
+    font-weight: normal;
+    color: var(--purple-two);
+}
+.sec2-wakanda .colonne{
+    margin-top: 100px;
+}
+.colonne{
+    width: 40%;
+    margin: 0px auto;
+    text-align: justify;
+}
+section.sec3-wakanda h2 {
+    font-family: 'BEYNO';
+    font-size: 20px;/* je n'ai pas fait à 32px comme dans l'énoncé parceque vous avez dit sur le canal"help qu'il faut suivre la forme de la maquette*/
+    font-weight: normal;
+    color: var(--purple-two);
+}
+.colm2-row2-image{
+    width:460px ;
+}
+.colm2-row2-image img{
+    width: 100%;
+}
+.colonne p{
+    margin-bottom: 10px;
+}
+.colonne h2{
+    margin: 20px auto;
+}
+.sec2-wakanda li{
+    font-family: 'Cantarell';
+    font-size: 10px;
+    list-style: none;
+}
+.sec2-wakanda li::before {
+    content: "-"; /* Utilise un tiret comme contenu avant chaque élément de liste */
+    display: inline-block; /* Affiche le tiret en tant que bloc inline */
+    width: 1em; /* Définit la largeur du tiret*/
+   /*margin-left: -1em; /* Déplace le tiret légèrement vers la gauche */
+}
+.sec3-colm1 .colonne{
+    padding-bottom: 30px;
+}
+.colm1-row1-video {
+    padding-bottom: 45px;
+}
+.sec3-colm1{
+    background-color: linear-gradient(to right, rgba(0, 0, 0, 0.9 ), transparent);
+}
+
+
+/* -------------Footer-----------  */
+footer {
+    background: url(../illustrations+Logo/All-pages/back_footer.png);
+    width: 100%;
+    height: 500px;
+    display: flex;
+    padding: 120px 0 50px 0;
+
+}
+
+footer .logo-foot-container {
+    background: url(../illustrations+Logo/All-pages/footer1.png) no-repeat;
+    background-size: contain;
+    background-size: 40%;
+    background-position: 70% 10px;
+    flex: 0.8;
+}
+footer .logo-foot-container>div {
+    position: relative;
+    top: 40%;
+    left: 50%;
+
+}
+footer .container-text {
+    flex: 1.2;
+    display: grid;
+    grid-template-areas: 'page social social'
+        'foot foot foot';
+}
+
+footer .about {
+    grid-area: page;
+}
+
+footer .social {
+    grid-area: social;
+}
+
+footer .social .marge {
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+footer .text-foot {
+    grid-area: foot;
+    display: flex;
+}
+.cercle{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--purple-three);
+    margin: 4px 10px;
+  }
+footer{
+    background-image: url(../Illustrations+Logo/All_pages/back_footer.png);
+}
+footer li, footer p {
+    font-size: calc(0.5rem + 0.5vw);
+    margin: 10px;
+}
+
+footer ul {
+    margin-top: 10px;
+}
+
+footer li, footer h2, footer p {
+    font-family: "Cantarell";
+    color: var(--white-color);
+
+}
+
+footer h2 {
+    padding: 5px 0 10px 5px;
+    font-size: calc(0.8rem + 0.6vw);
+    letter-spacing: 4px;
+}
+.logo-foot-container {
+    background-image: url(../Illustrations+Logo/All_pages/footer1.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    z-index: 2;
+}
+.logo-foot {
+    transition: transform 0.3s;
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+}
+.page{
+    text-decoration: none;
+    color: var(--white-color);
+}
+.page:hover{
+    text-decoration: underline;
+    text-decoration-color: var(white);
+}
+
+footer{
+    background-image: url('../Illustrations+Logo/All_pages/back_footer.png');
+    width: 100%;
+}
+.footer-content{
+    display: flex;
+    justify-content: space-around;
+}
+.footer-content-right{
+    display: grid;
+}
+footer div{
+    border: 2px solid transparent;
+}
+.right-up{
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Cantarell';
+    font-weight: 100;
+}
+.footer-content-right{
+    color: var(--white-color);
+}
+img.img23 {
+    padding-top: 131px;
+    padding-left: 76px;
+}
+.footer-content-left{
+    position: relative;
+    background-image: url(../Illustrations+Logo/All_pages/footer1.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 300px;
+    height: 300px;
+    margin: 3px 60px 10px 200px;
+  }
+.logo-sociaux {
+    text-align: center;
+    width: 100%;
+    margin: 5px auto;
+    justify-content: space-between;
+}
+.logo-sociaux a{
+    margin: 10px 5px;
+}
+
+.rigth-propos h3{
+    padding-right: 200px ;
+}
+.right-sociaux h3{
+    padding-left: 35px;
+}
+.rigth-propos p{
+    padding-top: 20px;
+}
+.rigth-propos .p2{
+    padding-top: 10px;
+}
+.copyright{
+    font-size: 10px;
+    display: flex;
+    margin-bottom: 20px;
+}
+.cercle{
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--purple-three);
+  margin: 4px 10px;
+}
+.footer-content-right h3{
+    font-size: 22px;
+    letter-spacing: 0.28em;
+}
+.rigth-propos a{
+    text-decoration: none;
+    color:var(--white-color);
+    cursor: pointer;
+}
+.rigth-propos a:hover{
+    text-decoration: underline;
+    text-decoration-color: var(--white-color);
+}
+
+/*zoomer les logos*/
+.logo-sociaux{
+    transition: transform 0.3s;
+}
+.zoom:hover {
+    transform: scale(1.1);
+}
+.img2 {
+    transition: transform 0.3s;
+}
+.img2:hover {
+    transform: scale(1.1);
+}
+
+/*--------------Résponsive avec un écran moins de 500px-----------*/
+@media (max-width: 500px) {
+    /*header*/
+    .nav-menu ul{
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        bottom: -50px;
+    }
+    .nav-menu li{
+        margin: 5px;
+    }
+
+    /*main*/
+    .wakanda-left{
+        width: 90%;
+        top: 5%;
+    }
+    .sec1-wakanda{
+        background: none;
+        height: 350px;
+    }
+    .sec2-wakanda{
+        background: none;
+    }
+    .container{
+        display: block;
+        width: 90%;
+    }
+    .colonne{
+        width: 100%;
+    }
+
+    .sec2-wakanda .colonne{
+        margin-top: 10px;
+    }
+    .colm1-row1-video {
+        padding-bottom: 10px;
+    }
+
+    /*footer*/
+    .footer-content{
+        display: block;
+    }
+    .right-up{
+        display: block;
+    }
+    .right-sociaux h3{
+        padding-left: 0px;
+        text-align: left;
+        font-size: medium;
+    }
+    .rigth-propos h3{
+        font-size: medium;
+    }
+    .footer-content-left{
+        background-image: none;
+        margin: 0px;
+        width: 283px;
+        height: 0px;
+      }
+    .logo-sociaux {
+        text-align: center;
+        width: 100%;
+        margin: 2px auto;
+    }
+    .logo-sociaux a{
+        margin: 10px 5px;
+    }
+    img.img23 {
+        padding-top: 50px;
+        padding-left: 128px;
+    }
+    footer{
+        padding-top: -100px;
+    }
+}

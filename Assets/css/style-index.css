@@ -1,0 +1,822 @@
+/* --------------fonts----------------*/
+@font-face {
+    font-family: 'Wakanda Forever';
+    src: url(../police/Wakanda-forever/WakandaForever-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Panthera';
+    src: url(../police/panthera/panthera.otf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Beyno';
+    src: url(../police/beyno/BEYNO.otf),
+        url(../police/beyno/BEYNO.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Cantarell';
+    src: url(../police/cantarell/Cantarell-Regular.ttf);
+    font-weight: normal;
+}
+
+nav li{
+    list-style-type: none;
+}
+
+/*--------------Variable de couleur-----------*/
+:root{
+    --white-color:#FFFFFF;
+    --purple-one:#F2CEF2;
+    --purple-two:#9E91B7;
+    --purple-three:#DF99F2;
+    --blue-one:#3D2DA6;
+    --blue-two:#07338C;
+    --blue-three:#021740;
+    }
+
+/* --------------le site------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    background: url(../Illustrations+Logo/All_pages/arrière_plan.png);
+    color: white;
+}
+.container {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+}
+h1 {
+    font-family: 'Panthera';
+    font-size: 50px;/* je n'ai pas fait à 68px comme dans l'énoncé parceque vous avez dit sur le canal"help qu'il faut suivre la forme de la maquette*/
+    font-weight: normal;
+    color: var(--purple-two);
+}
+h2 {
+    font-family: 'Beyno', sans-serif;
+    font-size: 25px;/* je n'ai pas fait à 32px comme dans l'énoncé parceque vous avez dit sur le canal"help qu'il faut suivre la forme de la maquette*/
+    font-weight: normal;
+    color: var(--purple-two)
+}
+p{
+    font-family: 'Cantarell';
+    font-size: 10px;/* je n'ai pas fait à 16px comme dans l'énoncé parceque vous avez dit sur le canal"help qu'il faut suivre la forme de la maquette*/
+}
+.plus {
+    font-family: 'Cantarell';
+    font-size: 10px;
+    color:var(--white-color);
+    font-weight: normal;
+    /*line-height: 1.5;*/
+}
+  
+/*apparition avec un mouvement slide*/
+  .fade-in {
+    opacity: 0;
+    transform: translateX(-50px); /* Décalage initial de -50px vers la gauche */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition pour l'animation */
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateX(0); /* Décalage final de 0px (pas de décalage) */
+  }
+
+    /* partie header */
+    /*des barres horizontaux*/
+    header{
+        padding-top: 20px;
+    }
+    /*logo en blanc*/
+    .blanc:hover{
+        filter: brightness(200%);
+    }
+    /*logo réseaux sociaux*/
+    .left-bar{
+        border: 1px solid var(--purple-two);
+        height: 457px;
+        width: 2px;
+        position: fixed;
+        left: 40px;
+    }
+    .rigth-bar{
+        border: 1px solid var(--purple-two);
+        height: 340px;
+        width: 2px;
+        position: fixed;
+        left: 55px;
+    }
+    .reso-socio{
+        width: 2px;
+        height: 2px;
+        position: fixed;
+        left: 50px;
+        top:347px;
+        display: inherit;
+    }
+    .reso-socio img{
+        width: 15px;
+        margin-top: 10px;
+        height: 15px;
+    }
+    /*couleur violet du logo*/
+    .logo-entete:hover{
+        cursor: pointer;
+        filter: invert(66%) sepia(88%) saturate(1004%) hue-rotate(265deg) brightness(106%) contrast(87%);
+    }
+.entete {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-menu {
+    width: 30%;
+}
+
+.entete .nav-menu ul {
+    display: flex;
+    justify-content: space-between;
+}
+header li a{
+    text-decoration: none;
+    color: var(--white-color);
+}
+header li a:hover{
+    text-decoration: underline;
+    text-decoration-color: var(--white-color);
+}
+ul a.active{
+    color:var(--purple-two);
+    cursor: pointer;
+    text-decoration: underline;
+}
+/*zoomer des photos dans la page*/
+.zoomable {
+    transition: transform 0.3s ease-in-out;
+}
+.zoomed {
+    transform: scale(1.2);
+}
+/*zoomer les titres dans la page*/
+.zoom{
+    transform: scale(1.1);
+}
+/* -------------section Accueil-----------  */
+.sec1-accueil {
+margin-top: 20px;
+width: 100%;
+height: 600px;
+background: url(../illustrations+Logo/Accueil/Pantherhome1..png) no-repeat;
+background-size: 65%;
+background-position-x: right;
+}
+/*.saryvozaha{
+    transform: scale(1.2);
+}*/
+.selected {
+    transform: scale(1.2);
+}
+.sec1-accueil div {
+width: 30%;
+position: relative;
+top: 25%;
+left: 10%;
+}
+
+.sec1-accueil div h1 {
+margin-bottom: 10px;
+}
+
+.sec1-accueil div h2 {
+margin-bottom: 30px;
+}
+
+.sec1-accueil div p {
+width: 86%;
+margin-bottom: 10px;
+}
+
+/*zoomer les photos en scrollant*/
+.zoomPhoto {
+    transition: transform 0.3s ease;
+}
+
+/* -------------section liste-----------  */
+section .liste-container{
+    width: 92%;
+    height: auto;
+    background-color: var(--blue-three);
+    display: flex;
+    position: relative;
+    left: 8%;
+            
+}
+.fade {
+    animation: fade-in 0.5s ease-in-out;
+}
+            
+@keyframes fade-in {
+    from {
+        transform: translate(0);
+        opacity: 1;
+    }    
+    to {
+        transform: translate(-300px);
+        opacity: 0;        
+    }           
+}         
+.liste-container div {
+    flex: 1;
+}        
+.liste-container .item2, .liste-container .item4 {
+    flex-grow: 1.1;
+    padding: 2% 3%;
+}         
+.liste-container h2 {
+    margin-bottom: 15px;
+}        
+.liste-container .item1, .lste-container .item3, .liste-container .item5 {
+    display: flex;
+    align-items: stretch;
+} 
+/* bouton de scroll pour la liste des personnages*/
+.liste-container .item5 {
+    position: relative;
+}        
+.liste-container .suivant {
+    position: absolute;
+    top: 50%;
+    right: 25%;
+    transform: translateY(-50%);
+    border-radius: 42px;
+    box-shadow: var(--white-color) 0px 0px 20px;
+    cursor: pointer;
+}
+/*taille des posters ou photos*/
+.pictur{
+    max-width :100%;
+}
+/*taille du boutton de scroll*/
+.liste-container .suivant img {
+    width: 30px;
+}
+
+/* -------------section CV-----------  */
+section.sec3-cv{
+    padding-top: 150px;
+}
+.sec3-cv .container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec3-cv .content{
+    display: flex;
+    flex-direction: row;
+    margin-left: 5%;
+    justify-content: space-between;
+}
+.sec3-cv .box{
+    width: 45%;
+}
+.sec3-cv h2 {
+    margin: 15px 0px;
+    }
+.description h3{
+text-align: center;
+}
+section.sec3-cv .container-left li{
+    list-style-type: none;
+    font-family: 'Cantarell';
+    font-size: 10px;/* je n'ai pas fait à 16px comme dans l'énoncé parceque vous avez dit sur le canal"help qu'il faut suivre la forme de la maquette*/
+}
+section.sec3-cv .container-left li::before {
+    content: "-"; /* Utilise un tiret comme contenu avant chaque élément de liste */
+    display: inline-block; /* Affiche le tiret en tant que bloc inline */
+    width: 1em; /* Définit la largeur du tiret*/
+   /*margin-left: -1em; /* Déplace le tiret légèrement vers la gauche */
+}
+section.sec3-cv p{
+    margin-top: 10px;
+}
+.identite{
+    color: black;
+    background-color: var(--white-color);
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 150px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+.identite img{
+    width: 270px;
+    margin-top: -200px;
+}
+.description{
+    font-family: 'Cantarell';
+    margin-left: 15%;
+    text-align: left;
+    width: 250px;
+}
+.description-menu{
+    padding: 5px;
+}
+.description a{
+    background-color: var(--blue-one);
+    margin: 5px;
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 10px;
+    padding: 5px;
+    border-radius: 4px;
+}
+.description-perso{
+    margin-top: 20px;
+    text-align: left;
+    width: 250px;
+    padding-bottom: 60px;
+}
+.description-perso ul li{
+    list-style-type: none;
+    font-family: 'Cantarell';
+    font-size: 10px;
+}
+.description-perso ul li span{
+    font-weight: bold;
+}
+.image-deguisement {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+.image-deguisement img {
+    width: 100%;
+}
+
+/* -------------section contact-----------  */
+
+section.contact *{
+    display: block;
+    color: black;
+    width: 80%;
+    margin: 10px auto;
+    text-align: center;
+}
+section.contact .formulaire{
+margin-top: 100px;
+}
+section.contact{
+    background-image: url(../Illustrations+Logo/Accueil/Pantherhome7.png);
+    background-size: cover;
+    padding-top: 20px;
+}
+section.contact .formulaire{
+    background-image: linear-gradient(to bottom, var(--white-color)20%, transparent);
+    border-radius: 150px;
+    width: 50%;
+    margin: 100px auto;
+    padding: 40px 0;
+}
+section.contact h2{
+    font-family: 'Cantarell';
+    font-size: 30px;
+    font-weight: bold;
+}
+section.contact input{
+    width:520px;
+    height: 56px;
+    border-radius: 38px;
+}
+section.contact textarea{
+    border-radius: 38px;
+    width: 520px;
+}
+section.contact button{
+    height:54px;
+    border-radius:38px;
+    width: 140px;
+}
+section.contact input[type='text'], input[type='email']{
+    background-color: transparent;
+    border: 1px solid var(--blue-three);
+    text-align: left;
+    padding-left: 40px;
+}
+section.contact textarea{
+    background-color: transparent;
+    border: 1px solid var(--blue-three);
+    text-align: left;
+    padding: 15px 40px;
+}
+button:hover{
+    box-shadow: 0 0 20px var(--purple-one);
+}
+div.espace {
+    width: 100%;
+    height: 150px;
+    background-image: linear-gradient(to right, black, var(--blue-three));
+}
+/*---------design du pop up----------*/
+.popup{
+    width:50%;
+    margin: auto;
+    text-align: center;
+    position: fixed;
+    top: 20%;
+    left:32%;
+    display: none;
+    z-index: 2;
+}
+.message-popup{
+    padding: 70px;
+    margin: 50px;
+    background: linear-gradient(to top,var(--blue-two), var(--purple-two));
+    /*box-shadow: var(--blue-two)  10px -10px 10px 10px;
+    box-shadow: 0 0 1000px var(--blue-two);*/
+   box-shadow: 0 0 100px var(--blue-two),
+              0 0 100px var(--blue-two),
+              0 0 100px var(--blue-two),
+              0 0 100px var(--blue-two);
+    border-radius: 10px;
+    position: fixed;
+}
+.message-popup button{
+    height:54px;
+    border-radius:38px;
+    width: 140px;
+}
+.message-popup p{
+    font-size: x-large;
+}
+
+/* -------------Footer-----------  */
+footer {
+    background: url(../illustrations+Logo/All-pages/back_footer.png);
+    width: 100%;
+    height: 500px;
+    display: flex;
+    padding: 120px 0 50px 0;
+
+}
+
+footer .logo-foot-container {
+    background: url(../illustrations+Logo/All-pages/footer1.png) no-repeat;
+    background-size: contain;
+    background-size: 40%;
+    background-position: 70% 10px;
+    flex: 0.8;
+}
+footer .logo-foot-container>div {
+    position: relative;
+    top: 40%;
+    left: 50%;
+
+}
+footer .container-text {
+    flex: 1.2;
+    display: grid;
+    grid-template-areas: 'page social social'
+        'foot foot foot';
+}
+
+footer .about {
+    grid-area: page;
+}
+
+footer .social {
+    grid-area: social;
+}
+
+footer .social .marge {
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+footer .text-foot {
+    grid-area: foot;
+    display: flex;
+}
+.cercle{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--purple-three);
+    margin: 4px 10px;
+  }
+footer{
+    background-image: url(../Illustrations+Logo/All_pages/back_footer.png);
+}
+footer li, footer p {
+    font-size: calc(0.5rem + 0.5vw);
+    margin: 10px;
+}
+
+footer ul {
+    margin-top: 10px;
+}
+
+footer li, footer h2, footer p {
+    font-family: "Cantarell";
+    color: var(--white-color);
+
+}
+
+.logo-foot-container {
+    background-image: url(../Illustrations+Logo/All_pages/footer1.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    z-index: 2;
+}
+.logo-foot {
+    transition: transform 0.3s;
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+}
+.page{
+    text-decoration: none;
+    color: var(--white-color);
+}
+.page:hover{
+    text-decoration: underline;
+    text-decoration-color: var(white);
+}
+
+footer{
+    background-image: url('../Illustrations+Logo/All_pages/back_footer.png');
+    width: 100%;
+}
+.footer-content{
+    display: flex;
+    justify-content: space-around;
+}
+.footer-content-right{
+    display: grid;
+}
+footer div{
+    border: 2px solid transparent;
+}
+.right-up{
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Cantarell';
+    font-weight: 100;
+}
+.footer-content-right{
+    color: var(--white-color);
+}
+img.img23 {
+    padding-top: 131px;
+    padding-left: 76px;
+}
+.footer-content-left{
+    position: relative;
+    background-image: url(../Illustrations+Logo/All_pages/footer1.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 300px;
+    height: 300px;
+    margin: 3px 60px 10px 200px;
+  }
+.logo-sociaux {
+    text-align: center;
+    width: 100%;
+    margin: 5px auto;
+    justify-content: space-between;
+}
+.logo-sociaux a{
+    margin: 10px 5px;
+}
+
+.rigth-propos h3{
+    padding-right: 200px ;
+}
+.right-sociaux h3{
+    padding-left: 35px;
+}
+.rigth-propos p{
+    padding-top: 20px;
+}
+.rigth-propos .p2{
+    padding-top: 10px;
+}
+.copyright{
+    font-size: 10px;
+    display: flex;
+    margin-bottom: 20px;
+}
+.cercle{
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--purple-three);
+  margin: 4px 10px;
+}
+.footer-content-right h3{
+    font-size: 22px;
+    letter-spacing: 0.28em;
+}
+.rigth-propos a{
+    text-decoration: none;
+    color:var(--white-color);
+    cursor: pointer;
+}
+.rigth-propos a:hover{
+    text-decoration: underline;
+    text-decoration-color: var(--white-color);
+}
+
+/*zoomer les logos*/
+.logo-sociaux{
+    transition: transform 0.3s;
+}
+.zoom:hover {
+    transform: scale(1.1);
+}
+.img2 {
+    transition: transform 0.3s;
+}
+.img2:hover {
+    transform: scale(1.1);
+}
+
+/*--------------Résponsive avec un écran moins de 500px-----------*/
+@media (max-width: 500px) {
+    /*header*/
+    .nav-menu ul{
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        bottom: -50px;
+    }
+    .nav-menu li{
+        margin: 5px;
+    }
+
+    /*main*/
+    .left-bar{
+        display: none;
+    }
+    .rigth-bar{
+        display: none;
+    }
+    .reso-socio{
+        display: none;
+    }
+    .sec1-accueil{
+        background-image: none;
+    }
+    .sec1-accueil {
+        margin-top: 0px;
+        width: 100%;
+        height: auto;
+    }
+    .sec1-accueil div {
+        width: 90%;
+        top: 5%;
+    }
+    .sec1-accueil div p {
+         width: 95%;
+        text-align: justify;
+    }
+    section .liste-container {
+        margin-top: 20px;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--blue-three);
+        display: block;
+        width: 90%;
+        height: auto;
+        left: 0px;
+    }
+    .liste-container .poster {
+         width: 50%;
+         margin: 0 auto;
+    }
+       
+    .liste-container .texte1, .liste-container .texte2 {
+    padding: 5px;
+    }
+    .liste-container p{
+         padding-bottom: 5px;
+    }
+    .liste-container h2 {
+        margin-bottom: 15px;
+    }
+    .liste-container img {
+        width: 100%;
+    }
+    .sec3-cv .container{
+        width: 90%;
+        margin: 0 auto;
+        display: block;
+    }    
+    .sec3-cv .content{
+        display: block;
+        flex-direction: column;
+    }
+    section.sec3-cv {
+        padding-top: 5px;
+    }
+    .sec3-cv .box{
+        width: 95%;
+        text-align: justify;
+    }
+    .identite{
+        background-color: var(--white-color);
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 5px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+    }
+    .identite img{
+        width: 270px;
+        margin-top: 5px;
+    }
+    section.contact{
+        width: 100%;
+    }
+    section.contact .formulaire{
+    margin-top: 10px;
+    }
+    section.contact{
+        padding-top: 0px;
+    }
+    section.contact .formulaire{
+        border-radius: 50px;
+        width: 90%;
+        margin: 20px auto;
+        padding: 5px 0;
+    }
+    section.contact input{
+        width: 100%;
+        height: 45px;
+    }
+    section.contact textarea{
+        width: 100%;
+    }
+    section.contact button{
+        height:45px;
+    }
+
+    div.espace {
+       display: none;
+    }
+
+    /*footer*/
+    .footer-content{
+        display: block;
+    }
+    .right-up{
+        display: block;
+    }
+    .right-sociaux h3{
+        padding-left: 0px;
+        text-align: left;
+        font-size: medium;
+    }
+    .rigth-propos h3{
+        font-size: medium;
+    }
+    .footer-content-left{
+        background-image: none;
+        margin: 0px;
+        width: 283px;
+        height: 0px;
+      }
+    .logo-sociaux {
+        text-align: center;
+        width: 100%;
+        margin: 2px auto;
+    }
+    .logo-sociaux a{
+        margin: 10px 5px;
+    }
+    img.img23 {
+        padding-top: 50px;
+        padding-left: 128px;
+    }
+    footer{
+        padding-top: -100px;
+    }
+}

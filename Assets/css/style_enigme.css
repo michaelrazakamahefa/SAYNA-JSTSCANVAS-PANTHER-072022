@@ -1,0 +1,780 @@
+/* --------------fonts----------------*/
+@font-face {
+    font-family: 'Wakanda Forever';
+    src: url(../police/Wakanda-forever/WakandaForever-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Panthera';
+    src: url(../police/panthera/panthera.otf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Beyno';
+    src: url(../police/beyno/BEYNO.otf),
+        url(../police/beyno/BEYNO.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Cantarell';
+    src: url(../police/cantarell/Cantarell-Regular.ttf);
+    font-weight: normal;
+}
+
+nav li{
+    list-style-type: none;
+}
+
+/*--------------Variable de couleur-----------*/
+:root{
+    --white-color:#FFFFFF;
+    --purple-one:#F2CEF2;
+    --purple-two:#9E91B7;
+    --purple-three:#DF99F2;
+    --blue-one:#3D2DA6;
+    --blue-two:#07338C;
+    --blue-three:#021740;
+    }
+
+/* --------------le site------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    background: url(../Illustrations+Logo/All_pages/arrière_plan.png);
+    color: white;
+}
+h1 {
+    font-family: 'Beyno';
+    font-size: 45px;/* je n'ai pas fait à 68px comme dans l'énoncé parceque vous avez dit sur le canal"help qu'il faut suivre la forme de la maquette*/
+    font-weight: normal;
+    color: var(--purple-two);
+}
+h2 {
+    font-family: 'Wakanda forever';
+    font-size: 25px;/* je n'ai pas fait à 32px comme dans l'énoncé parceque vous avez dit sur le canal"help qu'il faut suivre la forme de la maquette*/
+    font-weight: normal;
+    color: var(--purple-two)
+}
+p{
+    font-family: 'Cantarell';
+    font-size: 10px;/* je n'ai pas fait à 16px comme dans l'énoncé parceque vous avez dit sur le canal"help qu'il faut suivre la forme de la maquette*/
+}
+.plus {
+    font-family: 'Cantarell';
+    font-size: 10px;
+    color:var(--white-color);
+    font-weight: normal;
+    /*line-height: 1.5;*/
+}
+
+  /*apparition avec un mouvement slide*/
+  .fade-in {
+    opacity: 0;
+    transform: translateX(-50px); /* Décalage initial de -50px vers la gauche */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition pour l'animation */
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateX(0); /* Décalage final de 0px (pas de décalage) */
+  }
+  
+  body{
+    background-image: linear-gradient(to right, black, var(--blue-three));
+}
+
+/* partie header */
+    /*des barres horizontaux*/
+
+header .container{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+header{
+    padding-top: 20px;
+}
+    /*logo en blanc*/
+    .blanc:hover{
+        filter: brightness(200%);
+    }
+    /*logo réseaux sociaux*/
+    .left-bar{
+        border: 1px solid var(--purple-two);
+        height: 457px;
+        width: 2px;
+        position: fixed;
+        left: 40px;
+    }
+    .rigth-bar{
+        border: 1px solid var(--purple-two);
+        height: 340px;
+        width: 2px;
+        position: fixed;
+        left: 55px;
+    }
+    .reso-socio{
+        width: 2px;
+        height: 2px;
+        position: fixed;
+        left: 50px;
+        top:347px;
+        display: inherit;
+    }
+    .reso-socio img{
+        width: 15px;
+        margin-top: 10px;
+        height: 15px;
+    }
+.logo-entete{
+  z-index: 1;
+}
+    /*couleur violet du logo*/
+.logo-entete:hover{
+    cursor: pointer;
+    filter: invert(66%) sepia(88%) saturate(1004%) hue-rotate(265deg) brightness(106%) contrast(87%);
+}
+.entete {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-menu {
+    width: 30%;
+}
+
+.entete .nav-menu ul {
+    display: flex;
+    justify-content: space-between;
+}
+header li a{
+    text-decoration: none;
+    color: var(--white-color);
+}
+header li a:hover{
+    text-decoration: underline;
+    text-decoration-color: var(--white-color);
+}
+ul a.active{
+    color:var(--purple-two);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/*------------------section-one---------------*/
+.container{
+    width:80%;
+    margin: 0 auto;
+    display: flex;
+}
+.section-one {
+    padding-top: 50px;
+   /*background-image: url(../Illustrations+Logo/Enigme/Pantherenigme1.png); Avec image taloha agnay asset volohan*/
+}
+.logo-header a {
+    position: relative;
+    z-index: 2;
+  }
+main{
+    background-image: linear-gradient(to right, black, var(--blue-three));
+}
+.horizontal{
+    display: grid;
+    grid-template-columns: auto auto ;
+}
+ 
+.section-one-img img{
+   width: 100%;
+   transform: scale(1.7);
+    padding-left: 10%;
+    padding-top: 10%;
+}
+
+.section-one-description{
+    display: grid;
+    grid-template-areas: 'myArea myArea';
+    padding-left: 20%;
+    padding-right: 5%;
+}
+.item {
+    grid-area: myArea;
+    width: 75%;
+    justify-content: justify;
+    text-align: justify;
+  }
+.so-description-titre{
+    padding-top: 15%;
+    font-family: 'BEYNO';
+    font-size: 32px;
+    color:var(--purple-two);
+
+}
+.so-description-texte{
+    background: url(../Illustrations+Logo/Enigme/Pantherenigme2.png);
+    background-repeat: no-repeat;
+    background-position: center center; 
+    background-size: contain; 
+    overflow: hidden;
+    padding-top: 12%;
+    margin-top: 60%;
+    margin-left: 20%;
+    font-size: 10px;
+    width: 50%;
+    transform: scale(1.7);
+    font-family: 'Cantarell';
+    color: var(--white-color);
+    padding-bottom: -20%;
+    border-bottom: 1px solid transparent; 
+    border-image: linear-gradient(to right,var(--blue-one), var(--blue-three)) 1; 
+}
+.so-description-texte div{
+    transform: scale(0.60); 
+    padding: 0;
+
+}
+.so-description-texte .p1{
+    margin-bottom: -30px;
+}
+.so-description-texte .p2{
+    margin-bottom: 30px;
+    padding-bottom: 20%;
+}
+
+/*------------------section-two---------------*/
+.numero-question{
+    display: flex;
+    border-bottom: 1px solid var(--purple-three);
+    width: 55%;
+}
+.numero-question h2{
+    font-family:'Beyno' ;
+}
+.numero-question span{
+    font-family:sans-serif ;
+    font-size: 26px;
+    margin-left: 5px;
+}
+.texte-question{
+    margin-top: 5%;
+    color: var(--white-color);
+}
+.texte-code{
+    margin-top: 5%;
+}
+.column-left{
+    width: 100%;
+}
+.column-right{
+    background: url(../Illustrations+Logo/Enigme/Pantherenigme2.png);
+    background-repeat: no-repeat;
+    background-position: center center; 
+    background-size: contain; 
+    padding-top: 26%;
+    margin-right: 7%;
+    margin-top: 4%;
+    font-size: 10px;
+    width: 40%;
+    transform: scale(1.7);
+    font-family: 'Cantarell';
+    color: var(--white-color);
+}
+.column-right p{
+    transform: scale(0.60); 
+    padding: 0;
+}
+
+  .rw { 
+    margin-bottom: 10px;
+  }
+  .row-citation{
+        font-family: 'Wakanda forever';
+        color: var(--purple-two);
+        font-size: 20px;
+        width: 60%;
+        padding-top: 15%;
+  }
+  .row-transcript{
+    color: var(--white-color);
+    width: 30%;
+    font-family: 'Cantarell';
+    font-size: 10px;
+    padding-top: 5%;
+  }
+  .row-transcript p span{
+    font-family: 'Wakanda forever';
+  }
+  .row-transcript p {
+    padding: 10px 0px;
+  }
+.row-formulaire{
+    color: var(--white-color);
+    padding-top: 10%;
+}
+.row-formulaire p{
+    padding: 15px 0px;
+}
+.row-formulaire input[type='text']{
+    border:none;
+    background-color: transparent;
+    border: 1px solid var(--white-color);
+    width: 520px;
+    height: 56px;
+    border-radius: 38px;
+    padding-left: 40px;
+}
+button{
+    width: 174px;
+    height: 54px;
+    border-radius: 38px;
+    background-color:  #F2CEF2;
+    margin: 0 auto;
+    cursor: pointer;
+    margin: 60px 174px;
+}
+button:hover{
+    box-shadow: 0 0 20px #F2CEF2;
+}
+.section-two{
+padding-bottom: 10px;
+}
+
+/* -------------Section-quizz-----------  */
+/*.section-quizz{
+    display: none;
+}*/
+.section-quizz .numero-question{
+    width: 76%;
+}
+.section-quizz .column-left{
+    width: 75%;
+}
+.section-quizz .texte-code{
+    color: var(--white-color);
+}
+.section-quizz .column-right{
+    margin-left: 20%;
+    padding-top: 27%;
+    width: 40%;
+}
+.section-quizz .p1{
+    text-align: center;
+}
+.section-quizz .column-right{
+    margin-top: -6%;
+    text-align: justify;
+}
+.section-quizz .p2{
+    margin-top: -5%;
+}
+input[type="text"] {
+    color: var(--white-color);
+    font-size: 10px;
+}
+
+/*---------design du pop up----------*/
+.hide{
+    display: none;
+}
+#popup{
+    width:40%;
+    margin: auto;
+    text-align: center;
+    position: fixed;
+    top: 5%;
+    left:14%;
+    display: none;
+    z-index: 2;
+}
+#popup-content{
+    padding: 7%;
+    margin: 10%;
+    background: linear-gradient(to top,var(--blue-two), var(--purple-two));
+    /*box-shadow: var(--blue-two)  10px -10px 10px 10px;
+    box-shadow: 0 0 1000px var(--blue-two);*/
+   box-shadow: 0 0 100px var(--blue-two),
+              0 0 100px var(--blue-two),
+              0 0 100px var(--blue-two),
+              0 0 100px var(--blue-two);
+    border-radius: 10px;
+    position: fixed;
+}
+#popup-content button{
+    height:54px;
+    border-radius:38px;
+    width: 174px;
+}
+#popup-content p{
+    font-size: 14px;
+}
+#popup-content h2{
+    font-family: 'Cantarell';
+}
+
+/*popup final*/
+#additional-content{
+    display: none;
+}
+#additional-content{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    font-family: "Cantarell";
+}
+#additional-content .flex-item{
+    margin-left: 2%;
+}
+#additional-content .item2{
+    align-self: center;
+}
+#countdown-timer .timer{
+    margin-top: 5%;
+    font-size: xx-large;
+}
+/* -------------Footer-----------  */
+footer {
+    background: url(../illustrations+Logo/All-pages/back_footer.png);
+    width: 100%;
+    height: 500px;
+    display: flex;
+    padding: 140px 0 50px 0;
+
+}
+
+footer .logo-foot-container {
+    background: url(../Illustrations+Logo/All_pages/footer1.png) no-repeat;
+    background-size: contain;
+    background-size: 40%;
+    background-position: 70% 10px;
+    flex: 0.8;
+}
+footer .logo-foot-container>div {
+    position: relative;
+    top: 40%;
+    left: 50%;
+
+}
+footer .container-text {
+    flex: 1.2;
+    display: grid;
+    grid-template-areas: 'page social social'
+        'foot foot foot';
+}
+
+footer .about {
+    grid-area: page;
+}
+
+footer .social {
+    grid-area: social;
+}
+
+footer .social .marge {
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+footer .text-foot {
+    grid-area: foot;
+    display: flex;
+}
+.cercle{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--purple-three);
+    margin: 4px 10px;
+  }
+footer{
+    background-image: url(../Illustrations+Logo/All_pages/back_footer.png);
+}
+footer li, footer p {
+    font-size: calc(0.5rem + 0.5vw);
+    margin: 10px;
+}
+
+footer ul {
+    margin-top: 10px;
+}
+
+footer li, footer h2, footer p {
+    font-family: "Cantarell";
+    color: var(--white-color);
+
+}
+
+footer h2 {
+    padding: 5px 0 10px 5px;
+    font-size: calc(0.8rem + 0.6vw);
+    letter-spacing: 4px;
+}
+
+.logo-foot {
+    transition: transform 0.3s;
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+}
+.page{
+    text-decoration: none;
+    color: var(--white-color);
+}
+.page:hover{
+    text-decoration: underline;
+    text-decoration-color: var(white);
+}
+
+footer{
+    background-image: url('../Illustrations+Logo/All_pages/back_footer.png');
+    width: 100%;
+}
+.footer-content{
+    display: flex;
+    justify-content: space-around;
+}
+.footer-content-right{
+    display: grid;
+}
+footer div{
+    border: 2px solid transparent;
+}
+.right-up{
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Cantarell';
+    font-weight: 100;
+}
+.footer-content-right{
+    color: var(--white-color);
+}
+img.img23 {
+    padding-top: 131px;
+    padding-left: 76px;
+}
+.footer-content-left{
+    position: relative;
+    background-image: url('../Illustrations+Logo/All_pages/footer1.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 300px;
+    height: 300px;
+    margin: 3px 60px 10px 200px;
+  }
+.logo-sociaux {
+    text-align: center;
+    width: 100%;
+    margin: 5px auto;
+    justify-content: space-between;
+}
+.logo-sociaux a{
+    margin: 10px 5px;
+}
+
+.rigth-propos h3{
+    padding-right: 200px ;
+}
+.right-sociaux h3{
+    padding-left: 35px;
+}
+.rigth-propos p{
+    padding-top: 20px;
+}
+.rigth-propos .p2{
+    padding-top: 10px;
+}
+.copyright{
+    font-size: 10px;
+    display: flex;
+    margin-bottom: 20px;
+}
+.cercle{
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--purple-three);
+  margin: 4px 10px;
+}
+.footer-content-right h3{
+    font-size: 22px;
+    letter-spacing: 0.28em;
+}
+.rigth-propos a{
+    text-decoration: none;
+    color:var(--white-color);
+    cursor: pointer;
+}
+.rigth-propos a:hover{
+    text-decoration: underline;
+    text-decoration-color: var(--white-color);
+}
+
+/*zoomer les logos*/
+.logo-sociaux{
+    transition: transform 0.3s;
+}
+.zoom{
+    z-index: 1;
+
+}
+.zoom:hover {
+    transform: scale(1.1);
+}
+.img2 {
+    transition: transform 0.3s;
+}
+.img2:hover {
+    transform: scale(1.1);
+}
+
+/*--------------Résponsive avec un écran moins de 500px-----------*/
+@media (max-width: 500px) {
+    /*header*/
+    .nav-menu ul{
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        bottom: -50px;
+    }
+    .nav-menu li{
+        margin: 5px;
+    }
+
+    /*main*/
+    .section-one-img{
+        display: none;
+    }
+    .so-description-titre{
+        padding-top: 15%;
+        font-family: 'BEYNO';
+        font-size: 20px;
+        text-align: justify;
+        justify-content: center;
+        width: 90%;
+    }
+    .so-description-texte{
+        background: none;
+        width: 80%;
+        padding-top: 0px;
+        margin-bottom: -20px;
+        border-bottom: 1px solid transparent; 
+        border-image: linear-gradient(to right,var(--blue-one), var(--blue-three)) 1; 
+    }
+    .container{
+        display: block;
+    }
+    .row-citation{
+        font-size: 18px;
+        width: 100%;
+        padding-top: 25%;
+    }
+    .so-description-texte .p2{
+        margin-bottom: 0px;
+        padding-bottom: 60px;
+    }
+    .row-transcript{
+        width: 80%;
+        font-size: 10px;
+    }
+    .column-right{
+        background: none;
+        padding-top: 10%;
+        margin-top: -70%;
+        font-size: 10px;
+        width: 85%;
+        padding-bottom: 50%;
+    }
+    .row-formulaire{
+        padding-top: 15%;
+    }
+    .row-formulaire input[type='text']{
+        width:320px;
+        height: 50px;
+        padding-left: 20px;
+    }
+    button{
+        width: 125px;
+        height: 54px;
+        margin: 40px 100px;
+    }
+
+    /*footer*/
+    .footer-content{
+        display: block;
+    }
+    .right-up{
+        display: block;
+    }
+    .right-sociaux h3{
+        padding-left: 0px;
+        text-align: left;
+        font-size: medium;
+    }
+    .rigth-propos h3{
+        font-size: medium;
+    }
+    .footer-content-left{
+        background-image: none;
+        margin: 0px;
+        width: 283px;
+        height: 0px;
+      }
+    .logo-sociaux {
+        text-align: center;
+        width: 100%;
+        margin: 2px auto;
+    }
+    .logo-sociaux a{
+        margin: 10px 5px;
+    }
+    img.img23 {
+        padding-top: 50px;
+        padding-left: 128px;
+    }
+    footer{
+        padding-top: -100px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------Résponsive avec un écran moins de 500px-----------*/
+@media (max-width: 500px) {
+    
+}
+
